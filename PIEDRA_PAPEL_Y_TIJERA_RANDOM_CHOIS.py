@@ -23,7 +23,7 @@ def jugar_piedra_papel_tijera (eleccion_usuario : str) -> str :
     ) :
         return 'GANASTE'
 
-    return None
+    return 'Ingresate un valor que no es ni piedra, ni papel, ni tijera'
 
 for i in range(10):
     eleccion_usuario = str(input('Elige una opcion: piedra, papel o tijera: '))
