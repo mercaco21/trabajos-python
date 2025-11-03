@@ -1,0 +1,582 @@
+
+Escribir un algoritmo que muestre por pantalla las tablas de multiplicacion, desde el 1 hasta el 9.
+
+Ejemplo:
+
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3 ...
+.
+.
+.
+1 x 9 = 9 .
+.
+.
+
+[ ]
+for i in range(1,10):
+    print("Tabla del:", i)
+    for j in range (1,10):
+        print(i, "x", j, "=", i*j)
+Tabla del: 1
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+1 x 4 = 4
+1 x 5 = 5
+1 x 6 = 6
+1 x 7 = 7
+1 x 8 = 8
+1 x 9 = 9
+Tabla del: 2
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+Tabla del: 3
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+Tabla del: 4
+4 x 1 = 4
+4 x 2 = 8
+4 x 3 = 12
+4 x 4 = 16
+4 x 5 = 20
+4 x 6 = 24
+4 x 7 = 28
+4 x 8 = 32
+4 x 9 = 36
+Tabla del: 5
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+Tabla del: 6
+6 x 1 = 6
+6 x 2 = 12
+6 x 3 = 18
+6 x 4 = 24
+6 x 5 = 30
+6 x 6 = 36
+6 x 7 = 42
+6 x 8 = 48
+6 x 9 = 54
+Tabla del: 7
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+Tabla del: 8
+8 x 1 = 8
+8 x 2 = 16
+8 x 3 = 24
+8 x 4 = 32
+8 x 5 = 40
+8 x 6 = 48
+8 x 7 = 56
+8 x 8 = 64
+8 x 9 = 72
+Tabla del: 9
+9 x 1 = 9
+9 x 2 = 18
+9 x 3 = 27
+9 x 4 = 36
+9 x 5 = 45
+9 x 6 = 54
+9 x 7 = 63
+9 x 8 = 72
+9 x 9 = 81
+Ejercicio 3
+Dado un número de 2n+1 cifras (i.e. número impar de cifras), chequear si el mismo es palíndromo (capicúa).
+
+
+[ ]
+numero = 2112
+num_alreves = str(numero)[::-1]
+
+if str(numero) == num_alreves:
+    print("El numero es capicua ", numero,"-", num_alreves)
+else:
+    print("El número al revés es: ", num_alreves)
+El numero es capicua  2112 - 2112
+Ejercicio 4
+Diseñar un algoritmo que calcule la media de una serie de números positivos entrados por teclado. El ingreso de un valor igual a cero indicará el final del ingreso de datos.
+
+
+[ ]
+suma = 0
+cantidad_numeros = 0
+num = int(input("Ingrese un numero positivo, 0 para terminar con el ingreso: "))
+
+while num not 0:
+    cantidad_numeros = cantidad_numeros + 1
+    suma = suma + num
+    promedio = suma / cantidad_numeros
+    num = int(input("Ingrese un numero positivo, 0 para terminar con el ingreso: "))
+print ("El promedio de los números ingresados es: ", promedio)
+Ingrese un numero positivo, 0 para terminar con el ingreso: 4
+Ingrese un numero positivo, 0 para terminar con el ingreso: 6
+Ingrese un numero positivo, 0 para terminar con el ingreso: 3
+Ingrese un numero positivo, 0 para terminar con el ingreso: 0
+El promedio de los números ingresados es:  4.333333333333333
+Ejercicio 5
+Diseñar un algoritmo que calcula e imprime la suma de los números pares comprendidos entre 2 y 100.
+
+
+[ ]
+suma = 0
+for x in range(2,101,2):
+    suma = suma + x
+print("La suma de los números pares del 2 al 100 es: ",suma)
+La suma de los números pares del 2 al 100 es:  2550
+Ejercicio 6
+Diseñar un algoritmo que dado tres números, determinar si la suma de cualquier pareja de ellos es igual al tercer número. Si se cumple esta condición deberá imprimir la palabra ''iguales'', sino ''distintos''.
+
+
+[ ]
+suma = 0
+num1 = int(input("Ingrese un número: "))
+num2 = int(input("Ingrese un número: "))
+num3 = int(input("Ingrese un número: "))
+
+if num1 + num2 == num3 or num1 + num3 == num3 or num2 + num3 == num3:
+    print("Iguales")
+else:
+    print("Distintos")
+
+
+
+Ingrese un número: 6
+Ingrese un número: 7
+Ingrese un número: 15
+Distintos
+Ejercicio 7
+Diseñar un algoritmo que pida al usuario el ingreso de un horario, expresado en horas, minutos y segundos e indique la diferencia entre el horario ingresado y la hora actual en horas, minutos y segundos.
+
+
+[ ]
+
+Ejercicio 8
+Escribir las sentencias condicionales para calcular:
+
+a) x=x−5  si  a>b
+b) x={−81si a>bsi a<=b
+
+c) x=⎧⎩⎨⎪⎪10−1si n>5si n=5si n<5
+
+d) t=⎧⎩⎨⎪⎪⎪⎪⎪⎪135−4si x>asi a<=x<=bsi b<x<=csi c<xpara a<b<c
+
+[ ]
+a = 10
+b = 5
+c = 20
+n = 3
+c = 8
+
+# a)
+if a > b:
+    x = x -5
+# b)
+if a>b:
+    x = -8
+elif a<=b:
+    x =1
+# c)
+if n > 5:
+    x = 1
+elif n == 5:
+    x = 0
+else:
+    n = -1
+
+# d)
+if x >a:
+    x = 1
+elif a<= x <=b and a<b<c:
+    x = 3
+elif b < x < c:
+    x = 5
+elif x < x:
+    x = -4
+
+
+Ejercicio 9
+Se necesita realizar un programa para asistir a un empleado de un Cine (o Teatro). El empleado esta encargado de enviar a las personas a la sala correcta.
+
+Una vez comprada la entrada la audiencia se dirige al empleado, el cual, en base al número que figura en la entrada (3 dígitos) los envía a la sala correspondiente. Si la entrada es par, el empleado los dirige a la Sala 1. Cuando la entrada es impar los dirige a la sala 2.
+
+Recientemente, por un error en la impresión de las entradas han salido muchas con el número 000, en este caso el empleado debe comunicarle al usuario que se dirija a la administraci'on para obtener una nueva entrada.
+
+
+[ ]
+hay_gente = 4
+
+while hay_gente !=0:
+    num_entrada = int(input("Ingrese el número de la entrada de 3 digitos: "))
+    if num_entrada == 000:
+        print("Entrada con error, ir a boleteria")
+        continue
+    elif  num_entrada % 2 == 0:
+        print("Su sala es la número 1")
+    else:
+        print("Su sala es la número 2")
+
+
+    hay_gente -=1
+
+print("No hay más personas")
+
+Su sala es la número 1
+Entrada con error, ir a boleteria
+Su sala es la número 2
+Su sala es la número 2
+Su sala es la número 1
+No hay más personas
+Ejercicio 10
+Un empleado trabaja en la mesa de entradas de una organización. Le llegan expedientes de otras dependencias, los cuales debera depositar en 10 buzones distintos dependiendo del "codigo de expediente" .
+
+Los expedientes están codificados con números de 1 (uno) dígito. La forma de agrupación es la siguiente: los expedientes 0 serán depositados en el buzón A, los 1, serán depositados en el buzón B, y así sucesivamente hasta el buzón J.
+
+
+[ ]
+cantidad_expedientes = 5
+
+while cantidad_expedientes != 0:
+    codigo_expediente = int(input("Ingrese el código de expediente (un digito): "))
+    match codigo_expediente:
+        case 0:
+            print("Buzón A")
+        case 1:
+            print("Buzón B")
+        case 2:
+            print("Buzón C")
+        case 3:
+            print("Buzón D")
+        case 4:
+            print("Buzón E")
+        case 5:
+            print("Buzón F")
+        case 6:
+            print("Buzón G")
+        case 7:
+            print("Buzón H")
+        case 8:
+            print("Buzón I")
+        case 9:
+            print("Buzón J")
+        case _:
+            print("Código de expediente inválido")
+            continue
+    cantidad_expedientes -=1
+
+Buzón C
+Buzón G
+Buzón E
+Buzón F
+Código de expediente inválido
+Buzón B
+Ejercicio 11
+Diseñar un algoritmo que pida el total de kilometros recorridos, el precio de la gasolina (por litro), el dinero de gasolina gastado en el viaje y el tiempo que se ha tardado (en horas y minutos) y que calcule:
+
+a) Consumo de gasolina (en litros y pesos) por cada 100 km.
+
+b) Consumo de gasolina (en litros y pesos) por cada km.
+
+c) Velocidad media (en km/h y m/s).
+
+
+[ ]
+km_recorridos = float(input("Ingrese los kms recorridos"))
+precio_gasolina_litro = float(input("Ingrese el precio de la gasolina por Litro"))
+dinero_total_gasolina = float(input("Ingrese el dinero gastado en el viaje"))
+tiempo_tardado = input("Ingrese el tiempo tardado en horas y minutos")
+
+# Por km
+litros_totales = dinero_total_gasolina / precio_gasolina_litro
+consumo_km_litros = litros_totales / km_recorridos
+consumo_km_pesos = dinero_total_gasolina / km_recorridos
+# 100 km
+consumo_100km_litros = consumo_km_litros * 100
+consumo_100km_pesos = consumo_km_pesos * 100
+#Tiempo
+#Uso horas minutos como str usando split y dividiendo en 2 con : , con int luego de la separacion
+#lo convierto a int para operar
+horas, minutos = map(int, tiempo_tardado.split(":"))
+tiempo_total_hs = horas+ (minutos / 100)
+velocidad_mediaKMH = km_recorridos / tiempo_total_hs
+velocidad_mediaMS = velocidad_mediaKMH * (1000/3600)
+
+print(f"El consumo de gasolina por cada KM en litros fue de: ", consumo_km_litros," El consumo en pesos por KM fue de: $", precio_gasolina_litro )
+print(f"El consumo de gasolina en litros por cada 100KM fue de: ", consumo_100km_litros, " El consumo de gasolina en pesos cada 100KM fue de: $",consumo_100km_pesos)
+print("La velocidad media del viaje kmh fue de: ", velocidad_mediaKMH)
+El consumo de gasolina por cada KM fue de:  1.0  El consumo en pesos por KM fue de: $ 50.0
+El consumo de gasolina en litros por cada 10KM fue de:  100.0  El consumo de gasolina en pesos cada 100KM fue de: $
+La velocidad media del viaje fue de:  88.88888888888889
+Ejercicio 12
+Escribir los algoritmos que permiten generar las siguientes salidas.
+
+Nota: en la siguiente salida el carácter '_' es un espacio en blanco.
+
+
+
+[ ]
+# a)
+print("*****")
+print("*****")
+print("*****")
+print("*****")
+print("*****")
+
+# b)
+print(" *")
+print("  *")
+print("   *")
+print("    *")
+print("     *")
+
+# c)
+print("    *    ")
+print("   ***   ")
+print("  *****  ")
+print(" ******* ")
+print("    *    ")
+
+Ejercicio 13
+Desarrollar un algoritmo el cual dado un conjunto de números enteros, escribir aquellos que sean divisibles por I.
+
+
+[ ]
+numeros = {2,8,9,7}
+i = 2
+for numero in numeros:
+    if numero % i == 0:
+     print(f"El numero:", numero, " es divisible por:",i)
+    else:
+        print("El numero:", numero, " no es divisible por:",i)
+
+
+El numero: 8  es divisible por: 2
+El numero: 9  no es divisible por: 2
+El numero: 2  es divisible por: 2
+El numero: 7  no es divisible por: 2
+Ejercicio 14
+Desarrolle un programa que se le ingrese una cierta cantidad de dinero (en pesos y entera) y devuelva la menor cantidad de billetes de 100, 50, 20, 10, 5, 2 y monedas de 1 posibles.
+
+
+[ ]
+dinero = int(input("Ingrese la cantidad de dinero a evaluar"))
+
+# Para ir restando cuando saco billetes de x cantidad
+restante = dinero
+
+billete_100 = restante // 100
+restante = restante % 100
+
+billete_50 = restante // 50
+restante = restante % 50
+
+billete_20 = restante // 20
+restante = restante % 20
+
+billete_10 = restante // 10
+restante = restante % 10
+
+billete_5 = restante // 5
+restante = restante % 5
+
+billete_2 = restante // 2
+restante = restante % 2
+
+moneda_1peso = restante
+
+print("El dinero ingresado seria:", dinero)
+print(f"Billetes de 100", billete_100, " Billetes de 50:", billete_50, " Billetes de 20:", billete_20, " Billetes de 10:", billete_10, " illetes de 5:", billete_5, " Billetes de 2:", billete_2, " Monedas de 1 peso: ", moneda_1peso)
+
+El dinero ingresado seria: 2553
+Billetes de 100 25  Billetes de 50: 1  Billetes de 20: 0  Billetes de 10: 0  illetes de 5: 0  Billetes de 2: 1  Monedas de 1 peso:  1
+Ejercicio 15
+Desarrollar un programa que convierta una cantidad entera de segundos al formato "HORAS:MINUTOS:SEGUNDOS".
+
+
+[ ]
+segundos_totales = int(input("Ingrese tiempo en segundos"))
+
+#Horas
+horas = segundos_totales // 3600
+resto = segundos_totales % 3600
+#Minutos
+minutos = resto //60
+resto = segundos_totales % 60
+#Segundos
+segundos = resto
+
+print(f"HS:", horas,"MINUTOS:",minutos,"SEGUNDOS:", segundos)
+
+Tiempo HS: 2 MINUTOS: 46 SEGUNDOS: 40
+Ejercicio 16
+Desarrollar un programa que pida ingresar un número entero por teclado estrictamente mayor a 1 y devuelva su mayor divisor que sea distinto de el.
+
+
+[ ]
+num = int(input("Ingrese un numero mayor a 1: "))
+
+while num <=1:
+    print("El numero debe ser mayor a 1")
+    num = int(input("Ingrese un numero mayor a 1: "))
+
+mayor_divisor = num - 1
+while num % mayor_divisor != 0:
+    mayor_divisor -=1
+print("El mayor divisor es: ", mayor_divisor)
+
+Ingrese un numero mayor a 1: 10
+El mayor divisor es:  5
+
+[ ]
+
+Ejercicio 17
+Desarrollar un programa que pida ingresar un número entero por teclado estrictamente mayor a 1 y devuelva todos los divisores de ese número.
+
+
+[ ]
+num = int(input("Ingrese un numero mayor a 1: "))
+
+while num <=1:
+    print("El numero debe ser mayor a 1")
+    num = int(input("Ingrese un numero mayor a 1: "))
+
+divisor = num - 1
+
+while divisor != 0:
+    if num % divisor == 0:
+       print(divisor, "Es divisor de:", num)
+    divisor -=1
+
+
+22 Es divisor de: 44
+11 Es divisor de: 44
+4 Es divisor de: 44
+2 Es divisor de: 44
+1 Es divisor de: 44
+Ejercicio 18
+Desarrolle un programa que permita saber si un número ingresado por teclado es par (positivo y negativo) o impar (positivo y negativo).
+
+
+[ ]
+numero = int(input("Ingrese un número"))
+if numero > 0:
+    if numero % 2 == 0:
+        print("Número par positivo")
+    else:
+        print("Numero impar positivo")
+else:
+    if numero % 2 == 0:
+        print("Número par negativo")
+    else:
+        print("Numero impar negativo")
+Número par negativo
+Ejercicio 19
+Desarrollar un algoritmo que diga si un número ingresado es abundante.
+
+Nota: usar Google o Wikipedia para saber que es un número abundante.
+
+
+[ ]
+num = int(input("Ingrese un numero: "))
+divisor = num - 1
+divisores = 0
+
+while divisor != 0:
+    if num % divisor == 0:
+       divisores += divisor
+    divisor -=1
+
+if divisores > num:
+    print(num,"Es un número abundante")
+else:
+    print(num, "No es un número abundante")
+12 Es un número abundante
+Ejercicio 20
+Ídem anterior, pero para un conjunto de números de entrada. El algoritmo para cuando el número ingresado es igual a 0.
+
+
+[ ]
+num = int(input("Ingrese un numero para saber si es abundante o 0 para terminar "))
+
+while num !=0:
+    divisores = 0
+    divisor = num - 1
+
+    while divisor != 0:
+        if num % divisor == 0:
+          divisores += divisor
+        divisor -=1
+
+    if divisores > num:
+        print(num,"Es un número abundante")
+    else:
+        print(num, "No es un número abundante")
+    num = int(input("\nIngrese otro número (0 para terminar): "))
+16 No es un número abundante
+12 Es un número abundante
+Ejercicio 21
+Desarrollar un algoritmo para, dado un número natural, determinar si es defectivo.
+
+Nota: usar Google o Wikipedia para saber que es un n'umero defectivo.
+
+
+[ ]
+num = int(input("Ingrese un numero: "))
+divisor = num - 1
+divisores = 0
+
+while divisor != 0:
+    if num % divisor == 0:
+       divisores += divisor
+    divisor -=1
+
+if divisores < num:
+    print(num,"Es un número defectivo")
+else:
+    print(num, "No es un número defectivo")
+Ejercicio 22
+Desarrollar un algoritmo para encontrar los n'umeros perfectos entre 1 y N.
+
+
+[ ]
+num = int(input("Ingrese un numero: "))
+divisor = num - 1
+divisores = 0
+
+while divisor != 0:
+    if num % divisor == 0:
+       divisores += divisor
+    divisor -=1
+
+if divisores == num:
+    print(num,"Es un número perfecto")
+else:
+    print(num, "No es un número perfecto")
+10 No es un número perfecto

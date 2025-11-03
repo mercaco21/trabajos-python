@@ -1,0 +1,8 @@
+archivo3.linea1
+archivo3.linea2
+archivo3.linea3
+archivo3.linea4
+archivo3.linea5
+archivo3.linea6
+archivo3.linea7
+archivo3.linea8

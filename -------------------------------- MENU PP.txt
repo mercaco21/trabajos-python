@@ -1,0 +1,10 @@
+-------------------------------- MENU PPAL --------------------------------------
+-------------------->: ingrese la opcion que desee   : 
+Listar Todos los libros:   Ingrese -> 1
+Listar Todos los Usuarios: Ingrese -> 2
+Prestar un Libro:          Ingrese -> 3
+Devolver un Libro:         Ingrese -> 4
+Ver Libros Prestados:      Ingrese -> 5
+Ver Prestamos Vencidos:    Ingrese -> 6
+Datos de un Libro  :       Ingrese -> 7
+Salir                      Ingrese -> 8

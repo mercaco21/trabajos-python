@@ -1,0 +1,12 @@
+resultado = input("Ingresa tu edad:")
+input (type(resultado) )
+numero = int(resultado)
+print(numero + 2) 
+# str(22)
+# float(22.13)
+# bool ( " un string")
+# bool ( false)
+# bool ( "" )
+# bool ( nome)
+# bool ( 0 )
+# del punto 7 al 11 todos ebaluan en fase

@@ -1,0 +1,2 @@
+archivo2.linea1
+archivo2.linea2
